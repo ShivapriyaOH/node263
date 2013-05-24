@@ -1,0 +1,14 @@
+var config = {};
+
+config.couchdb = {};
+config.twilio = {};
+
+config.couchdb.url = 'https://node263.cloudant.com';
+config.couchdb.port = 443;
+config.couchdb.username = 'node263';
+config.couchdb.password = 'node263';
+
+config.twilio.sid = 'ACxxx';
+config.twilio.key = 'yyy';
+
+module.exports = config;
