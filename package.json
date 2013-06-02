@@ -1,6 +1,6 @@
 {
   "name": "node263-votr-part1",
-  "version": "0.0.1-38",
+  "version": "0.0.1-53",
   "private": true,
   "scripts": {
     "start": "app.js"
@@ -10,7 +10,10 @@
     "hjs": "*",
     "cradle": "0.6.3",
     "twiliosig": "0.0.1",
-    "socket.io": "0.9.11"
+    "socket.io": "0.9.11",
+    "underscore": "1.4.x",
+    "nano": "3.3.x",
+    "twilio": "1.1.x"
   },
   "subdomain": "node263-votr-part1",
   "engines": {

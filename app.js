@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -13,7 +12,7 @@ var app = express()
   , io = socketio.listen(server);
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 3066);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'hjs');
   app.use(express.favicon());
@@ -48,4 +47,8 @@ io.sockets.on('connection', function(socket) {
     });
 });
 
-require('./routes')(app, io);
+var routes = require('./routes')(io);
+
+app.get('/', routes.index);
+app.get('/events/:shortname', routes.getEvent);
+app.post('/', routes.voteSMS);
