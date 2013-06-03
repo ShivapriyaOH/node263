@@ -85,7 +85,7 @@ var index = exports.index = function(req, res){
                 events.saveVote(event, vote, from);
                 console.log('Accepting vote: ' + event.name + ', ' + from);
                 //io.sockets.in(event.shortname).emit('vote', vote);
-                //response.send('<Response><Sms>Thanks for your vote for ' + event.voteoptions[vote-1].name + '. Powered by Twilio.</Sms></Response>');   
+                response.send('<Response><Sms>Thanks for your vote for ' + event.voteoptions[vote-1].name + ' ! :) </Sms></Response>');   
                 response.send('<Response></Response>');   
             } 
         }); 
